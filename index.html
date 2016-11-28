@@ -18,7 +18,7 @@ $(document).ready(function(){
 function myFunction() {
 
 $.ajax({
-		type:'POST',
+		type:'GET',
 		url:'server.php',
 		data:'latitude='+latitude+'&longitude='+longitude,
 		success:function(msg){
@@ -38,8 +38,8 @@ function showLocation(position) {
    document.getElementById("latitude").value = latitude;
 	document.getElementById("longitude").value = longitude;
 	$.ajax({
-		type:'POST',
-		url:'https://10.163.14.63/geoloc/getLocation.php',
+		type:'GET',
+		url:'getLocation.php',
 		data:'latitude='+latitude+'&longitude='+longitude,
 		success:function(msg){
             if(msg){
