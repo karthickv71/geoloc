@@ -39,7 +39,7 @@ function showLocation(position) {
 	document.getElementById("longitude").value = longitude;
 	$.ajax({
 		type:'GET',
-		url:'getLocation.php',
+		url:'http://10.163.14.63/geoloc/',
 		data:'latitude='+latitude+'&longitude='+longitude,
 		success:function(msg){
             if(msg){
